@@ -18,8 +18,6 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
-      - name: Detect secrets
-        uses: alphagov/pay-ci/actions/detect-secrets@master
 
   install-and-compile:
     name: "Install and compile"
@@ -40,7 +38,7 @@ jobs:
   cypress-tests:
     name: "Cypress"
     needs: [ install-and-compile ]
-    uses: alphagov/pay-ci/.github/workflows/_run-node-cypress-tests.yml@master
+    uses: alphagov/pay-ci/.github/workflows/_run-node-cypress-tests.yml@pp-12795-setup-job-percy-cicd
 
   pact-providers-contract-tests:
     name: "Provider tests"
