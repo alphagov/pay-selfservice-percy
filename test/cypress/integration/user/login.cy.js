@@ -11,6 +11,7 @@ describe('Login Page', () => {
   const validCode = '123456'
 
   beforeEach(() => {
+    console.log('Test')
     cy.task('setupStubs', [
       userStubs.getUserSuccess({ userExternalId, gatewayAccountId, serviceName: 'service-name' }),
       gatewayAccountStubs.getGatewayAccountsSuccess({ gatewayAccountId }),
