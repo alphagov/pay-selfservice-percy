@@ -7,7 +7,8 @@ on:
         required: true
       pact_broker_password:
         required: true
-
+      PERCY_TOKEN:
+        required: true 
 
 permissions:
   contents: read
