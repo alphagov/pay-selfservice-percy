@@ -12,6 +12,7 @@ describe('Login Page', () => {
 
   beforeEach(() => {
     console.log('Test 2')
+    console.log('Test 3')
     cy.task('setupStubs', [
       userStubs.getUserSuccess({ userExternalId, gatewayAccountId, serviceName: 'service-name' }),
       gatewayAccountStubs.getGatewayAccountsSuccess({ gatewayAccountId }),
