@@ -11,6 +11,7 @@ describe('Login Page', () => {
   const validCode = '123456'
 
   beforeEach(() => {
+    console.log('Test 2')
     cy.task('setupStubs', [
       userStubs.getUserSuccess({ userExternalId, gatewayAccountId, serviceName: 'service-name' }),
       gatewayAccountStubs.getGatewayAccountsSuccess({ gatewayAccountId }),
@@ -26,6 +27,7 @@ describe('Login Page', () => {
 
   describe('Page content', () => {
     it('should have the page title \'Sign in to GOV.UK Pay\'', () => {
+      cy.percySnapshot()
       cy.title().should('eq', 'Sign in to GOV.UK Pay')
     })
     it('should redirect to the login page', () => {
