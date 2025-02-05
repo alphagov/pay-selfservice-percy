@@ -16,6 +16,7 @@ describe('Login Page', () => {
     console.log('Test 4')
     console.log('Test 5')
     console.log('Test 6')
+    console.log('Test 7')
     cy.task('setupStubs', [
       userStubs.getUserSuccess({ userExternalId, gatewayAccountId, serviceName: 'service-name' }),
       gatewayAccountStubs.getGatewayAccountsSuccess({ gatewayAccountId }),
