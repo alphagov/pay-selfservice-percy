@@ -7,7 +7,7 @@ on:
         required: true
       pact_broker_password:
         required: true
-      PERCY_TOKEN:
+      percy_token:
         required: true
 
 permissions:
@@ -35,7 +35,7 @@ jobs:
     needs: [ install-and-compile ]
     uses: alphagov/pay-ci/.github/workflows/_run-node-cypress-tests.yml@pp-12795-percy
     secrets:
-      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      PERCY_TOKEN: ${{ secrets.percy_token }}
 
   pact-providers-contract-tests:
     name: "Provider tests"
