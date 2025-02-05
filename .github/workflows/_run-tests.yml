@@ -35,7 +35,7 @@ jobs:
     needs: [ install-and-compile ]
     uses: alphagov/pay-ci/.github/workflows/_run-node-cypress-tests.yml@pp-12795-percy
     secrets:
-      PERCY_TOKEN: "test-123"
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   pact-providers-contract-tests:
     name: "Provider tests"
