@@ -12,13 +12,6 @@ describe('Login Page', () => {
 
   beforeEach(() => {
     console.log('Test 2')
-    console.log('Test 3')
-    console.log('Test 4')
-    console.log('Test 5')
-    console.log('Test 6')
-    console.log('Test 7')
-    console.log('Test 8')
-    console.log('Test 9')
     cy.task('setupStubs', [
       userStubs.getUserSuccess({ userExternalId, gatewayAccountId, serviceName: 'service-name' }),
       gatewayAccountStubs.getGatewayAccountsSuccess({ gatewayAccountId }),
