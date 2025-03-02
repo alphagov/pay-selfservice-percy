@@ -46,6 +46,7 @@
     "cypress:server": "run-amock --port=8000 | node -r dotenv/config dist/application.js dotenv_config_path=test/cypress/test.env",
     "cypress:dev-server": "run-amock --port=8000 | NODE_ENV=test node dev-server.mjs",
     "cypress:test": "cypress run",
+    "cypress:percy": "percy exec -- cypress run",
     "cypress:test-headed": "cypress open",
     "publish-pacts": "./bin/publish-pacts.js"
   },
@@ -124,6 +125,8 @@
     "@govuk-pay/run-amock": "0.0.9",
     "@pact-foundation/pact": "^12.1.1",
     "@pact-foundation/pact-core": "^14.0.5",
+    "@percy/cli": "^1.30.7",
+    "@percy/cypress": "^3.1.4",
     "@types/jquery": "^3.5.32",
     "chai": "4.5.0",
     "chai-arrays": "2.2.0",
