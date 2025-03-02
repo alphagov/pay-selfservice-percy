@@ -36,6 +36,8 @@ jobs:
     uses: alphagov/pay-ci/.github/workflows/_run-node-cypress-tests.yml@pp-12795-percy
     with:
       LIBGL_ALWAYS_SOFTWARE: "1"
+    secrets:
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   pact-providers-contract-tests:
     name: "Provider tests"
